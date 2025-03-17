@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFFDF2; 
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 20px;
+  padding-top: 50px; 
+}
+
+
+
+/* Main Author Page Container */
+.author-page-container {
+  margin-top: 350px;
+  width: 100%;
+  max-width: 1000px;
+  background-color: #FFFDF2;
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.author-page-container:hover {
+  transform: scale(1.02);
+}
+
+
+/* Title Section */
+.author-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.author-title h1 {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.author-title p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 25px; 
+}
+
+/* Search and Filter Section */
+#search-author {
+  width: 60%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  margin-right: 20px; 
+}
+
+#category {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #000;
+  color: #FFFDF2;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #333; 
+  transform: scale(1.05); 
+}
+
+.featured-authors {
+  margin-bottom: 40px; 
+  text-align: center;
+}
+
+.featured-authors h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.featured-authors .author-card {
+  display: inline-block;
+  background-color: #FFF;
+  padding: 25px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.featured-authors .author-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.featured-authors .author-photo {
+  width: 150px; 
+  height: 150px;
+  border-radius: 50%; 
+  object-fit: cover;
+  object-position: top center; 
+  margin-bottom: 20px;
+}
+
+.featured-authors .author-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.featured-authors .author-bio {
+  font-size: 1.2rem;
+  margin-bottom: 20px; 
+}
+
+/* Author Grid */
+.author-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px; 
+  justify-items: center;
+}
+
+.author-card {
+  background-color: #FFF;
+  padding: 25px;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin-bottom: 40px;
+}
+
+.author-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.author-card .author-photo {
+  width: 120px; 
+  height: 120px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  object-position: top center; 
+  margin-bottom: 20px; 
+}
+
+.author-card .author-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 15px; 
+}
+
+.author-card .author-bio {
+  font-size: 1.1rem;
+  margin-bottom: 20px; 
+}
+
+@media (max-width: 600px) {
+  .author-title h1 {
+    font-size: 2rem;
+  }
+
+  .author-title p {
+    font-size: 1rem;
+  }
+
+  .author-card .author-name {
+    font-size: 1.4rem;
+  }
+
+  .author-card .author-bio {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Footer Styling */
+#site-footer {
+  width: 100%;
+  background-color: #000;
+  color: #FFFDF2;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid #FFFDF2;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  z-index: 100; 
+}
+
+#site-footer p {
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+#site-footer p:hover {
+  color: #CCC;
+}
+
+.author-page-container {
+  margin-bottom: 60px; 
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+label{
+  position: relative;
+  width: 480px;
+
+  
