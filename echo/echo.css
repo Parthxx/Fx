@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFFDF2;
+  color: #333;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title and Intro */
+h1 {
+  font-size: 3.5rem;
+  color: #333;
+  margin-top: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+h1:hover {
+  color: #000;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Section Box around Echoes of the Ultras */
+#echoes-of-the-ultras {
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 40px;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+#echoes-of-the-ultras:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Section heading styles */
+#echoes-of-the-ultras h1 {
+  font-size: 3.5rem;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#echoes-of-the-ultras p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Style for each Ultra Group section */
+.ultras-groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.ultra-group {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+}
+
+.ultra-group:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background-color: #f0f0f0;
+}
+
+.ultra-group h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.ultra-group h2:hover {
+  color: #000;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.ultra-group p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.ultra-group p:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+/* Images and Videos */
+.team-img {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+video {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+video:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Fancy Hover Animation */
+.ultra-group:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.2));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ultra-group:hover:after {
+  opacity: 1;
+}
+
+ultra-group p:hover {
+  transform: scale(1.05);
+  font-weight: bold;
+}
+
+.ultra-group:active {
+  transform: scale(1.05);
+  background-color: #e8e8e8;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+  .ultras-groups {
+      grid-template-columns: 1fr;
+  }
+}
+/* Footer Styling */
+#site-footer {
+  width: 100%;
+  background-color: #000;
+  color: #FFFDF2;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid #FFFDF2;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  z-index: 100; /* Ensures it stays on top */
+}
+
+#site-footer p {
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+#site-footer p:hover {
+  color: #CCC;
+}
+
+.share-story-container {
+  margin-bottom: 60px; /
+}
